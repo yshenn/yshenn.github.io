@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>All Posts - 我的全新 Hugo 网站</title>
+        <link>http://example.org/posts/</link>
+        <description>All Posts | 我的全新 Hugo 网站</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>qys@njfu.edu.cn (yshenn)</managingEditor>
+            <webMaster>qys@njfu.edu.cn (yshenn)</webMaster><lastBuildDate>Wed, 23 Nov 2022 19:57:36 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Firstblog</title>
+    <link>http://example.org/posts/firstblog/</link>
+    <pubDate>Wed, 23 Nov 2022 19:57:36 &#43;0800</pubDate>
+    <author>yshenn</author>
+    <guid>http://example.org/posts/firstblog/</guid>
+    <description><![CDATA[this is my first page Now, i can write something here ]]></description>
+</item>
+</channel>
+</rss>
