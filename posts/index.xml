@@ -4,7 +4,22 @@
         <link>http://example.org/posts/</link>
         <description>All Posts | 我的全新 Hugo 网站</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>qys@njfu.edu.cn (yshenn)</managingEditor>
-            <webMaster>qys@njfu.edu.cn (yshenn)</webMaster><lastBuildDate>Wed, 23 Nov 2022 19:57:36 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>qys@njfu.edu.cn (yshenn)</webMaster><lastBuildDate>Wed, 23 Nov 2022 20:31:16 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>CompilerPrinciples</title>
+    <link>http://example.org/posts/compiler_principle/</link>
+    <pubDate>Wed, 23 Nov 2022 20:31:16 &#43;0800</pubDate>
+    <author>yshenn</author>
+    <guid>http://example.org/posts/compiler_principle/</guid>
+    <description><![CDATA[编译原理 chapter 3 词法分析 目标：学习如何构建一个词法分析器 方法： 手动：建立起每个词法单元的词法结构图或其他描述，编写代码识别输入中的每个词素，返回识别到的词法单元的有关信息 自动：向一个词法分析器生成工具(lexical-analyzer generater)描述出词素的模式，然后将这些模式编译为具有词法分析器功能的代码 理论运用： 正则表达式(regular expression) 不确定有穷自动机(NFA) 确定有穷自动机(DFA) 工具 Lex(lexicl-analyzer generator) 3.1 词法分析器的作用 主要任务 读入源程序的输入字符、将它们组成词素，生成并输出一个词法单元序列，每个词法单元对应于一个词素
+其他任务
+过滤掉源程序中的注释和空白 将编译器生成的错误消息与源程序的位置联系起来 3.1.1 词法分析和语法分析 把编译过程的部分划分为词法分析和语法分析的原因：
+简化编译器的设计 提高编译器的效率 增强编译器的可移植性(抽象、分离) 3.1.2 词法单元、模式和词素 词法单元由一个词法单元名和一个可选的属性值组成(token, attribute) 模式描述了一个词法单元的词素可能具有的形式 词素是源程序的一个字符序列、和某个词法单元的模式匹配，并被词法分析器识别为该词法单元的一个实例 理解:可以把词法单元看成一个集合，模式看成构成这个集合的约束条件，词素看成这个集合里面的元素
+3.1.3 词法单元的属性值 如果多个词素可以和一个模式匹配，那么词法分析器必须向编译器和后续阶段提供有关被匹配词素的附加信息(词素) 假设词法单元至多有一个相关的属性值，这个属性值可能是一个组合了多种信息的结构化数据 一个标识符的属性值是一个指向符号表中该标识对应条目的指针
+3.2 输入缓冲 3.2.1 缓冲区对 3.2.1 哨兵标记 3.3 词法单元的规约 正则表达式是一种描述词素模式的重要表示方法，利用正则表达式的形式化表示来描述模式
+3.3.1 串和语言 **字母表(alphabet)**是一个有限的符号集合 (某个字母表上的)**串(string)**是该字母表中符号的一个有穷序列 ==注意==：空串长度为0的串用E表示 **语言(language)**是某个给定字母表上一个任意的可数上串集合 ==串的各部分术语==
+串s的前缀(prefix) 串s的后缀(suffix) 串s的子串(substring) 串s的真(true)前缀、真后缀、真子串 串s的子序列(subsequence) 串x和y的连接(concatenation)(记作xy) 是把y附加到x后面而形成的串 3.3.2 语言上的运算 在词法分析中，最重要的语言上的运算是 并、 连接 和 闭包运算]]></description>
+</item>
+<item>
     <title>Firstblog</title>
     <link>http://example.org/posts/firstblog/</link>
     <pubDate>Wed, 23 Nov 2022 19:57:36 &#43;0800</pubDate>
