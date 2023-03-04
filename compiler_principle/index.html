@@ -14,11 +14,11 @@
 3.3.1 串和语言 **字母表(alphabet)**是一个有限的符号集合 (某个字母表上的)**串(string)**是该字母表中符号的一个有穷序列 ==注意==：空串长度为0的串用E表示 **语言(language)**是某个给定字母表上一个任意的可数上串集合 ==串的各部分术语==
 串s的前缀(prefix) 串s的后缀(suffix) 串s的子串(substring) 串s的真(true)前缀、真后缀、真子串 串s的子序列(subsequence) 串x和y的连接(concatenation)(记作xy) 是把y附加到x后面而形成的串 3.3.2 语言上的运算 在词法分析中，最重要的语言上的运算是 并、 连接 和 闭包运算" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://yshenn.com/compiler_principle/" /><meta property="og:image" content="http://yshenn.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://yshenn.com/compiler_principle/" /><meta property="og:image" content="http://yshenn.com/images/fire-solid.svg"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-11-23T20:31:16+08:00" />
 <meta property="article:modified_time" content="2022-11-23T20:31:16+08:00" /><meta property="og:site_name" content="yshenn&#39;s blog" />
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="http://yshenn.com/logo.png"/>
+<meta name="twitter:image" content="http://yshenn.com/images/fire-solid.svg"/>
 
 <meta name="twitter:title" content="CompilerPrinciples"/>
 <meta name="twitter:description" content="编译原理 chapter 3 词法分析 目标：学习如何构建一个词法分析器 方法： 手动：建立起每个词法单元的词法结构图或其他描述，编写代码识别输入中的每个词素，返回识别到的词法单元的有关信息 自动：向一个词法分析器生成工具(lexical-analyzer generater)描述出词素的模式，然后将这些模式编译为具有词法分析器功能的代码 理论运用： 正则表达式(regular expression) 不确定有穷自动机(NFA) 确定有穷自动机(DFA) 工具 Lex(lexicl-analyzer generator) 3.1 词法分析器的作用 主要任务 读入源程序的输入字符、将它们组成词素，生成并输出一个词法单元序列，每个词法单元对应于一个词素
@@ -30,9 +30,7 @@
 3.3.1 串和语言 **字母表(alphabet)**是一个有限的符号集合 (某个字母表上的)**串(string)**是该字母表中符号的一个有穷序列 ==注意==：空串长度为0的串用E表示 **语言(language)**是某个给定字母表上一个任意的可数上串集合 ==串的各部分术语==
 串s的前缀(prefix) 串s的后缀(suffix) 串s的子串(substring) 串s的真(true)前缀、真后缀、真子串 串s的子序列(subsequence) 串x和y的连接(concatenation)(记作xy) 是把y附加到x后面而形成的串 3.3.2 语言上的运算 在词法分析中，最重要的语言上的运算是 并、 连接 和 闭包运算"/>
 <meta name="application-name" content="我的网站">
-<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://yshenn.com/compiler_principle/" /><link rel="prev" href="http://yshenn.com/firstblog/" /><link rel="next" href="http://yshenn.com/blog/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/fire-solid.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://yshenn.com/compiler_principle/" /><link rel="prev" href="http://yshenn.com/firstblog/" /><link rel="next" href="http://yshenn.com/blog/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
