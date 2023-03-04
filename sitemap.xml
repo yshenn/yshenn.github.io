@@ -2,9 +2,10 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://example.org/posts/compiler_principle/</loc><lastmod>2022-11-23T20:31:16&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/posts/</loc><lastmod>2022-11-23T20:31:16&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/</loc><lastmod>2022-11-23T20:31:16&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/posts/firstblog/</loc><lastmod>2022-11-23T19:57:36&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/categories/</loc></url><url>
-            <loc>http://example.org/tags/</loc></url></urlset>
+            <loc>http://yshenn.com/blog/</loc><lastmod>2023-03-04T10:12:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://yshenn.com/posts/</loc><lastmod>2023-03-04T10:12:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://yshenn.com/</loc><lastmod>2023-03-04T10:12:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://yshenn.com/compiler_principle/</loc><lastmod>2022-11-23T20:31:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://yshenn.com/firstblog/</loc><lastmod>2022-11-23T19:57:36&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://yshenn.com/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://yshenn.com/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>

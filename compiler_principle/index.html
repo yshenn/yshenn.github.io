@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>CompilerPrinciples - yshenn&#39;s blog</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="CompilerPrinciples" />
+        <title>CompilerPrinciples - yshenn&#39;s blog</title><meta name="Description" content="welcome"><meta property="og:title" content="CompilerPrinciples" />
 <meta property="og:description" content="编译原理 chapter 3 词法分析 目标：学习如何构建一个词法分析器 方法： 手动：建立起每个词法单元的词法结构图或其他描述，编写代码识别输入中的每个词素，返回识别到的词法单元的有关信息 自动：向一个词法分析器生成工具(lexical-analyzer generater)描述出词素的模式，然后将这些模式编译为具有词法分析器功能的代码 理论运用： 正则表达式(regular expression) 不确定有穷自动机(NFA) 确定有穷自动机(DFA) 工具 Lex(lexicl-analyzer generator) 3.1 词法分析器的作用 主要任务 读入源程序的输入字符、将它们组成词素，生成并输出一个词法单元序列，每个词法单元对应于一个词素
 其他任务
 过滤掉源程序中的注释和空白 将编译器生成的错误消息与源程序的位置联系起来 3.1.1 词法分析和语法分析 把编译过程的部分划分为词法分析和语法分析的原因：
@@ -14,10 +14,12 @@
 3.3.1 串和语言 **字母表(alphabet)**是一个有限的符号集合 (某个字母表上的)**串(string)**是该字母表中符号的一个有穷序列 ==注意==：空串长度为0的串用E表示 **语言(language)**是某个给定字母表上一个任意的可数上串集合 ==串的各部分术语==
 串s的前缀(prefix) 串s的后缀(suffix) 串s的子串(substring) 串s的真(true)前缀、真后缀、真子串 串s的子序列(subsequence) 串x和y的连接(concatenation)(记作xy) 是把y附加到x后面而形成的串 3.3.2 语言上的运算 在词法分析中，最重要的语言上的运算是 并、 连接 和 闭包运算" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://yshenn.com/posts/compiler_principle/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://yshenn.com/compiler_principle/" /><meta property="og:image" content="http://yshenn.com/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-11-23T20:31:16+08:00" />
-<meta property="article:modified_time" content="2022-11-23T20:31:16+08:00" /><meta property="og:site_name" content="My cool site" />
-<meta name="twitter:card" content="summary"/>
+<meta property="article:modified_time" content="2022-11-23T20:31:16+08:00" /><meta property="og:site_name" content="yshenn&#39;s blog" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://yshenn.com/logo.png"/>
+
 <meta name="twitter:title" content="CompilerPrinciples"/>
 <meta name="twitter:description" content="编译原理 chapter 3 词法分析 目标：学习如何构建一个词法分析器 方法： 手动：建立起每个词法单元的词法结构图或其他描述，编写代码识别输入中的每个词素，返回识别到的词法单元的有关信息 自动：向一个词法分析器生成工具(lexical-analyzer generater)描述出词素的模式，然后将这些模式编译为具有词法分析器功能的代码 理论运用： 正则表达式(regular expression) 不确定有穷自动机(NFA) 确定有穷自动机(DFA) 工具 Lex(lexicl-analyzer generator) 3.1 词法分析器的作用 主要任务 读入源程序的输入字符、将它们组成词素，生成并输出一个词法单元序列，每个词法单元对应于一个词素
 其他任务
@@ -27,12 +29,12 @@
 3.2 输入缓冲 3.2.1 缓冲区对 3.2.1 哨兵标记 3.3 词法单元的规约 正则表达式是一种描述词素模式的重要表示方法，利用正则表达式的形式化表示来描述模式
 3.3.1 串和语言 **字母表(alphabet)**是一个有限的符号集合 (某个字母表上的)**串(string)**是该字母表中符号的一个有穷序列 ==注意==：空串长度为0的串用E表示 **语言(language)**是某个给定字母表上一个任意的可数上串集合 ==串的各部分术语==
 串s的前缀(prefix) 串s的后缀(suffix) 串s的子串(substring) 串s的真(true)前缀、真后缀、真子串 串s的子序列(subsequence) 串x和y的连接(concatenation)(记作xy) 是把y附加到x后面而形成的串 3.3.2 语言上的运算 在词法分析中，最重要的语言上的运算是 并、 连接 和 闭包运算"/>
-<meta name="application-name" content="My cool site">
-<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="application-name" content="我的网站">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://yshenn.com/posts/compiler_principle/" /><link rel="prev" href="http://yshenn.com/posts/firstblog/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://yshenn.com/compiler_principle/" /><link rel="prev" href="http://yshenn.com/firstblog/" /><link rel="next" href="http://yshenn.com/blog/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -40,9 +42,9 @@
         "inLanguage": "en-us",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/yshenn.com\/posts\/compiler_principle\/"
+            "@id": "http:\/\/yshenn.com\/compiler_principle\/"
         },"genre": "posts","wordcount":  173 ,
-        "url": "http:\/\/yshenn.com\/posts\/compiler_principle\/","datePublished": "2022-11-23T20:31:16+08:00","dateModified": "2022-11-23T20:31:16+08:00","publisher": {
+        "url": "http:\/\/yshenn.com\/compiler_principle\/","datePublished": "2022-11-23T20:31:16+08:00","dateModified": "2022-11-23T20:31:16+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -50,15 +52,33 @@
             },"description": ""
     }
     </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="yshenn&#39;s blog">My cool site</a>
+            <a href="/" title="yshenn&#39;s blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/fire-solid.svg"
+        data-srcset="/images/fire-solid.svg, /images/fire-solid.svg 1.5x, /images/fire-solid.svg 2x"
+        data-sizes="auto"
+        alt="/images/fire-solid.svg"
+        title="/images/fire-solid.svg" />yshenn</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> posts </a><a class="menu-item" href="/tags/"> tags </a><a class="menu-item" href="/categories/"> categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a></div>
         </div>
@@ -67,17 +87,45 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="yshenn&#39;s blog">My cool site</a>
+                <a href="/" title="yshenn&#39;s blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/fire-solid.svg"
+        data-srcset="/images/fire-solid.svg, /images/fire-solid.svg 1.5x, /images/fire-solid.svg 2x"
+        data-sizes="auto"
+        alt="/images/fire-solid.svg"
+        title="/images/fire-solid.svg" />yshenn</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">posts</a><a class="menu-item" href="/tags/" title="">tags</a><a class="menu-item" href="/categories/" title="">categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
-</header><main class="main">
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
@@ -85,7 +133,7 @@
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>yshenn</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-23">2022-11-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;173 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  data-kept="">
+        </div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
@@ -94,16 +142,54 @@
   <ul>
     <li><a href="#chapter-3-词法分析">chapter 3 词法分析</a>
       <ul>
-        <li><a href="#31-词法分析器的作用">3.1 词法分析器的作用</a></li>
-        <li><a href="#32-输入缓冲">3.2 输入缓冲</a></li>
-        <li><a href="#33-词法单元的规约">3.3 词法单元的规约</a></li>
-        <li><a href="#36-有穷自动机">3.6 有穷自动机</a></li>
-        <li><a href="#37-从正则表达式到自动机">3.7 从正则表达式到自动机</a></li>
+        <li><a href="#31-词法分析器的作用">3.1 词法分析器的作用</a>
+          <ul>
+            <li><a href="#311-词法分析和语法分析">3.1.1 词法分析和语法分析</a></li>
+            <li><a href="#312-词法单元模式和词素">3.1.2 词法单元、模式和词素</a></li>
+            <li><a href="#313-词法单元的属性值">3.1.3 词法单元的属性值</a></li>
+          </ul>
+        </li>
+        <li><a href="#32-输入缓冲">3.2 输入缓冲</a>
+          <ul>
+            <li><a href="#321-缓冲区对">3.2.1 缓冲区对</a></li>
+            <li><a href="#321-哨兵标记">3.2.1 哨兵标记</a></li>
+          </ul>
+        </li>
+        <li><a href="#33-词法单元的规约">3.3 词法单元的规约</a>
+          <ul>
+            <li><a href="#331-串和语言">3.3.1 串和语言</a></li>
+            <li><a href="#332-语言上的运算">3.3.2 语言上的运算</a></li>
+            <li><a href="#333-正则表达式">3.3.3 正则表达式</a></li>
+            <li><a href="#334-正则定义">3.3.4 正则定义</a></li>
+            <li><a href="#335-正则表达式的扩展未看">3.3.5 正则表达式的扩展(未看）</a></li>
+          </ul>
+        </li>
+        <li><a href="#36-有穷自动机">3.6 有穷自动机</a>
+          <ul>
+            <li><a href="#361-不确定的有穷自动机">3.6.1 不确定的有穷自动机</a></li>
+            <li><a href="#362-转化表">3.6.2 转化表</a></li>
+            <li><a href="#363-自动机中输入字符串的接受">3.6.3 自动机中输入字符串的接受</a></li>
+            <li><a href="#364-确定的有穷自动机">3.6.4 确定的有穷自动机</a></li>
+          </ul>
+        </li>
+        <li><a href="#37-从正则表达式到自动机">3.7 从正则表达式到自动机</a>
+          <ul>
+            <li><a href="#371-从nfa-到dfa-的转换">3.7.1 从NFA 到DFA 的转换</a></li>
+            <li><a href="#372-nfa-模拟">3.7.2 NFA 模拟</a></li>
+            <li><a href="#373-nfa模拟的效率未看">3.7.3 NFA模拟的效率(未看)</a></li>
+            <li><a href="#374-从正则表达式构造nfa">3.7.4 从正则表达式构造NFA</a></li>
+            <li><a href="#374-字符串处理算法的效率未看">3.7.4 字符串处理算法的效率(未看)</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li><a href="#chapter-4-语法分析">chapter 4 语法分析</a>
       <ul>
-        <li><a href="#41-引论">4.1 引论</a></li>
+        <li><a href="#41-引论">4.1 引论</a>
+          <ul>
+            <li><a href="#411-语法分析器的作用">4.1.1 语法分析器的作用</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -259,9 +345,11 @@
                 <span>Updated on 2022-11-23</span>
             </div></div>
         <div class="post-info-line">
-            <div class="post-info-md"></div>
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/compiler_principle/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://yshenn.com/posts/compiler_principle/" data-title="CompilerPrinciples"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://yshenn.com/posts/compiler_principle/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://yshenn.com/posts/compiler_principle/" data-title="CompilerPrinciples"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://yshenn.com/posts/compiler_principle/" data-title="CompilerPrinciples"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://yshenn.com/posts/compiler_principle/" data-title="CompilerPrinciples"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://yshenn.com/compiler_principle/" data-title="CompilerPrinciples"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://yshenn.com/compiler_principle/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://yshenn.com/compiler_principle/" data-title="CompilerPrinciples"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://yshenn.com/compiler_principle/" data-title="CompilerPrinciples"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://yshenn.com/compiler_principle/" data-title="CompilerPrinciples"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -273,12 +361,13 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/firstblog/" class="prev" rel="prev" title="Firstblog"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Firstblog</a></div>
+    <div class="post-nav"><a href="/firstblog/" class="prev" rel="prev" title="Firstblog"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Firstblog</a>
+            <a href="/blog/" class="next" rel="next" title="Blog">Blog<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.110.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">yshenn</a></span></div>
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">yshenn</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp">苏ICP备2022043676</span></div>
         </div>
     </footer></div>
 
@@ -287,5 +376,5 @@
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

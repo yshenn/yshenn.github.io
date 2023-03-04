@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Tags - Tag - 我的全新 Hugo 网站</title>
-        <link>http://example.org/tags/</link>
-        <description>Tags - Tag - 我的全新 Hugo 网站</description>
+        <title>Tags - Tag - yshenn&#39;s blog</title>
+        <link>http://yshenn.com/tags/</link>
+        <description>Tags - Tag - yshenn&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>qys@njfu.edu.cn (yshenn)</managingEditor>
-            <webMaster>qys@njfu.edu.cn (yshenn)</webMaster><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /></channel>
+            <webMaster>qys@njfu.edu.cn (yshenn)</webMaster><atom:link href="http://yshenn.com/tags/" rel="self" type="application/rss+xml" /></channel>
 </rss>

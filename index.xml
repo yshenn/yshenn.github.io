@@ -1,17 +1,25 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>我的全新 Hugo 网站</title>
-        <link>http://example.org/</link>
-        <description>This is my cool site</description>
+        <title>yshenn&#39;s blog</title>
+        <link>http://yshenn.com/</link>
+        <description>welcome</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>qys@njfu.edu.cn (yshenn)</managingEditor>
-            <webMaster>qys@njfu.edu.cn (yshenn)</webMaster><lastBuildDate>Wed, 23 Nov 2022 20:31:16 &#43;0800</lastBuildDate>
-            <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+            <webMaster>qys@njfu.edu.cn (yshenn)</webMaster><lastBuildDate>Sat, 04 Mar 2023 10:12:18 &#43;0800</lastBuildDate>
+            <atom:link href="http://yshenn.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Blog</title>
+    <link>http://yshenn.com/blog/</link>
+    <pubDate>Sat, 04 Mar 2023 10:12:18 &#43;0800</pubDate>
+    <author>yshenn</author>
+    <guid>http://yshenn.com/blog/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>CompilerPrinciples</title>
-    <link>http://example.org/posts/compiler_principle/</link>
+    <link>http://yshenn.com/compiler_principle/</link>
     <pubDate>Wed, 23 Nov 2022 20:31:16 &#43;0800</pubDate>
     <author>yshenn</author>
-    <guid>http://example.org/posts/compiler_principle/</guid>
+    <guid>http://yshenn.com/compiler_principle/</guid>
     <description><![CDATA[编译原理 chapter 3 词法分析 目标：学习如何构建一个词法分析器 方法： 手动：建立起每个词法单元的词法结构图或其他描述，编写代码识别输入中的每个词素，返回识别到的词法单元的有关信息 自动：向一个词法分析器生成工具(lexical-analyzer generater)描述出词素的模式，然后将这些模式编译为具有词法分析器功能的代码 理论运用： 正则表达式(regular expression) 不确定有穷自动机(NFA) 确定有穷自动机(DFA) 工具 Lex(lexicl-analyzer generator) 3.1 词法分析器的作用 主要任务 读入源程序的输入字符、将它们组成词素，生成并输出一个词法单元序列，每个词法单元对应于一个词素
 其他任务
 过滤掉源程序中的注释和空白 将编译器生成的错误消息与源程序的位置联系起来 3.1.1 词法分析和语法分析 把编译过程的部分划分为词法分析和语法分析的原因：
@@ -23,10 +31,10 @@
 </item>
 <item>
     <title>Firstblog</title>
-    <link>http://example.org/posts/firstblog/</link>
+    <link>http://yshenn.com/firstblog/</link>
     <pubDate>Wed, 23 Nov 2022 19:57:36 &#43;0800</pubDate>
     <author>yshenn</author>
-    <guid>http://example.org/posts/firstblog/</guid>
+    <guid>http://yshenn.com/firstblog/</guid>
     <description><![CDATA[this is my first page Now, i can write something here ]]></description>
 </item>
 </channel>
