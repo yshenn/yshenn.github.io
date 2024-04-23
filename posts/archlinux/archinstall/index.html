@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth" data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="en" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>  Archlinux-Installation &middot; yshenn</title>
+  <meta name="title" content="  Archlinux-Installation &middot; yshenn" />
+  
+  
+  
+  
+  
+  <link rel="canonical" href="https://yshenn.cc/posts/archlinux/archinstall/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.ac59a1b8eaafef739c129d12787ac29f6a420bcb348c7aeec8949a8d0b7d6c2023766c169d14b9031b751504eb3c976efe786fec135b340a49868acd8caa4127.css"
+    integrity="sha512-rFmhuOqv73OcEp0SeHrCn2pCC8s0jHruyJSajQt9bCAjdmwWnRS5Axt1FQTrPJdu/nhv7BNbNApJhorNjKpBJw==" />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.17ffe617e664d257760ee5f71869a6d9328d3613601c03a2eb7a194bbfb06ddc629a70f7b348e6e9446e81d0789555aebce09d27debd0329fc297601a1ee6a77.js"
+    integrity="sha512-F//mF&#43;Zk0ld2DuX3GGmm2TKNNhNgHAOi63oZS7&#43;wbdximnD3s0jm6URugdB4lVWuvOCdJ969Ayn8KXYBoe5qdw==" data-copy="" data-copied=""></script>
+  
+  
+  <script src="/js/zoom.min.js"></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="https://yshenn.cc/posts/archlinux/archinstall/">
+  <meta property="og:site_name" content="yshenn">
+  <meta property="og:title" content="  Archlinux-Installation">
+  <meta property="og:description" content="Archlinux Installation 本文是以记录为目的，可以作为一个参考，网上有很多很详细的教程，还有官方的ArchWiki。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+  <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-04-23T17:28:15+08:00">
+    <meta property="article:modified_time" content="2024-04-23T17:28:15+08:00">
+    <meta property="og:image" content="https://yshenn.cc/posts/archlinux/archinstall/feature.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://yshenn.cc/posts/archlinux/archinstall/feature.png"><meta name="twitter:title" content="  Archlinux-Installation">
+<meta name="twitter:description" content="Archlinux Installation 本文是以记录为目的，可以作为一个参考，网上有很多很详细的教程，还有官方的ArchWiki。">
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "  Archlinux-Installation",
+    "headline": "  Archlinux-Installation",
+    
+    "abstract": "Archlinux Installation 本文是以记录为目的，可以作为一个参考，网上有很多很详细的教程，还有官方的ArchWiki。",
+    "inLanguage": "en",
+    "url" : "https:\/\/yshenn.cc\/posts\/archlinux\/archinstall\/",
+    "author" : {
+      "@type": "Person",
+      "name": "yshenn"
+    },
+    "copyrightYear": "2024",
+    "dateCreated": "2024-04-23T17:28:15\u002b08:00",
+    "datePublished": "2024-04-23T17:28:15\u002b08:00",
+    
+    "dateModified": "2024-04-23T17:28:15\u002b08:00",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "548"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="yshenn" />
+  
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.js" integrity=""></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+  
+  
+  <meta name="theme-color"/>
+  
+  
+</head>
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>Skip to main content</a>
+  </div>
+  
+  
+  <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">yshenn</a>
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center space-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Blog
+    </p>
+</a>
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class="ltr:mr-14 rtl:ml-14 flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center space-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400" style="margin-right:5px">
+                <div class="flex items-center justify-center dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 -mr-2 md:hidden">
+
+        <label id="menu-button" for="menu-controller" class="block">
+            <input type="checkbox" id="menu-controller" class="hidden" />
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" style="padding-top:5px;"
+                class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li>
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Blog
+        </p>
+    </a>
+</li>
+
+
+
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+
+  
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
+
+
+<article>
+  
+  
+  
+  
+  
+  
+
+
+<div id="hero" class="h-[150px] md:h-[200px]"></div>
+
+
+
+    
+    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    style="background-image:url(/posts/archlinux/archinstall/feature_hu06ac8a39604a00eb124e4c8d60ecfe9f_727260_1200x0_resize_box_3.png);">
+    
+
+
+    <div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
+    </div>
+    <div
+        class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal">
+    </div>
+</div>
+
+  
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Archlinux-Installation
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2024-04-23 17:28:15 &#43;0800 CST">23 April 2024</time><span class="px-2 text-primary-500">&middot;</span><span>548 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      
+      
+        
+        
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+        
+      
+      <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
+      alt="yshenn" src="/img/head2_hu56384351f7cf83766a946c2c5df1f788_77150_192x192_fill_q75_box_center.jpg" />
+    
+  
+  <div class="place-self-center">
+    
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      Author
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      yshenn
+    </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+      
+
+      
+
+      
+      <div class="mb-5"></div>
+      
+
+    
+
+  </header>
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
+
+         <details open class="toc-right mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#安装前准备">安装前准备</a></li>
+    <li><a href="#安装">安装</a>
+      <ul>
+        <li><a href="#基本设置">基本设置</a></li>
+        <li><a href="#磁盘分区">磁盘分区</a></li>
+        <li><a href="#正式安装">正式安装</a></li>
+        <li><a href="#安装后新系统中的配置">安装后，新系统中的配置</a></li>
+      </ul>
+    </li>
+    <li><a href="#重启后的配置">重启后的配置</a></li>
+    <li><a href="#links">Links</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#安装前准备">安装前准备</a></li>
+    <li><a href="#安装">安装</a>
+      <ul>
+        <li><a href="#基本设置">基本设置</a></li>
+        <li><a href="#磁盘分区">磁盘分区</a></li>
+        <li><a href="#正式安装">正式安装</a></li>
+        <li><a href="#安装后新系统中的配置">安装后，新系统中的配置</a></li>
+      </ul>
+    </li>
+    <li><a href="#重启后的配置">重启后的配置</a></li>
+    <li><a href="#links">Links</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+ 
+<script>
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = e.attr('id');
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+          
+            $(e).removeClass('active');
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+        
+        onScroll();
+      });
+    }
+  })();
+</script>
+   </div>
+      </div>
+      
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+
+
+        <div class="article-content max-w-prose mb-20">
+          <hr>
+<p>Archlinux Installation
+本文是以记录为目的，可以作为一个参考，网上有很多很详细的教程，还有官方的ArchWiki。</p>
+<hr>
+
+
+<h2 class="relative group">安装前准备 
+    <div id="%E5%AE%89%E8%A3%85%E5%89%8D%E5%87%86%E5%A4%87" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%AE%89%E8%A3%85%E5%89%8D%E5%87%86%E5%A4%87" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p><strong>关于双系统</strong><br>
+双系统的安装分两种：</p>
+<ul>
+<li>一种是将win 和 linux 安装在同一张硬盘上，这时候，需要提前在win中分出一个空闲的区域，为linux留出空间</li>
+<li>另外一种是将win 和 linux安装在两张独立的硬盘上，此时和单系统安装一样，但安装后的系统引导设置不同</li>
+</ul>
+<hr>
+<p><strong>下载iso</strong><br>
+去 <a href="https://archlinux.org/download/"   target="_blank">
+    archlinux官网</a> 或者一些开源镜像站(<a href="https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/"   target="_blank">
+    tsinghua</a>)，下载最新iso文件</p>
+<hr>
+<p><strong>下载安装盘刻录软件</strong><br>
+我使用的是 <a href="https://www.ventoy.net/cn/index.html"   target="_blank">
+    ventoy</a>，开源。它和一般的刻录软件不同，一般软件是将安装引导系统刻录进整个U盘，这样系统安装完之后，U盘就不能直接使用了，需要进行格式化；而使用ventoy安装系统后，U盘还是能够正常使用，也不需要备份U盘内的文件；并且操作起来也很简单，只需要把ios文件直接拷贝至u盘即可，无需其他操作。</p>
+<hr>
+<p><strong>主板BIOS设置</strong><br>
+开始安装之前，需要对bios进行简单的设置</p>
+<ul>
+<li>关闭Secure Boot，archwiki指出<code>Arch Linux installation images do not support Secure Boot</code></li>
+<li>设置安装盘（也就是U盘）优先启动</li>
+</ul>
+<p>每台电脑进入Bios的方式都不一样，具体可以根据电脑型号，参考官方说明书</p>
+<hr>
+
+
+<h2 class="relative group">安装 
+    <div id="%E5%AE%89%E8%A3%85" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%AE%89%E8%A3%85" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">基本设置 
+    <div id="%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>设置好bios，插上U盘，就准备开始安装了。
+当电脑屏幕跳出引导加载器菜单(boot loader menu), 也就是一个可以选择的黑框框，选择第一个Arch Linux install medium, 直接回车，就进入了archlinux安装环境</p>
+<hr>
+<p><strong>设置合适的字体和键盘布局(optional)</strong><br>
+安装环境下，这个console中的字体特别得小，看着很费劲，所以可以修改一下字体，选择一个更大的字体，系统所有可用字体都在<code>/use/share/kbd/consolefonts/</code>目录下，可以用<code>setfont</code>命令进行设置：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#以/usr/share/kbd/consolefonts/ 下的文件名(省略扩展名)，作为命令参数</span>
+</span></span><span class="line"><span class="cl">setfont LatGrkCyr-12x22 <span class="c1">#这是一个比较大的字体</span>
+</span></span></code></pre></div><p>同时你也可以更改键盘布局，一般不需要更改，默认是US布局，所有支持的键盘布局都在<code>/usr/share/kbd/keymaps/</code>下的每一个目录中，使用<code>loadkeys</code>命令进行修改：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 同样，下面的参数就是键盘布局的名字，不加扩展名</span>
+</span></span><span class="line"><span class="cl">loadkeys keyboardlayout
+</span></span></code></pre></div><hr>
+<p><strong>确定电脑的启动模式(optional)</strong><br>
+电脑启动在加载硬件驱动方面的程序，主要有早期的BIOS和现在的UEFI两种，两种模式的启动方式不一样，按照archwiki介绍，可以通过以下命令确认电脑是UEFI模式：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /sys/firmware/efi/fw_platform_size
+</span></span><span class="line"><span class="cl"><span class="c1"># 返回64 或者 32，分别代表64bit 和 32bit的UEFI，若文件不存在，则有可能是BIOS</span>
+</span></span></code></pre></div><hr>
+<p><strong>连接网络</strong></p>
+<p>首先，检查网络设备是否打开：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 该命令，列出无线网卡设备的名字（wlan0），以及其状态，如果其状态中&lt;...,...,UP,...&gt;有UP标志，标志网卡设备已经打开，否则为关闭</span>
+</span></span><span class="line"><span class="cl">ip link
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果未打开，使用以下命令打开</span>
+</span></span><span class="line"><span class="cl">ip link <span class="nb">set</span> wlan0 up <span class="c1"># 这里网卡名为wlan0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果以上命令出现了 Operation not possible due to RF-kill，则需要先将使用rfkill解锁网卡</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># rfkill - tool for enabling and disabling wireless devices</span>
+</span></span><span class="line"><span class="cl">rfkill <span class="c1"># 列出无线设备及状态</span>
+</span></span><span class="line"><span class="cl">rfkill unblock wlan  <span class="c1"># unblock网卡</span>
+</span></span></code></pre></div><p>接着使用iwctl来设置无线网络，这是一个使用命令交互形式的网络设置程序</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 查看帮助信息</span>
+</span></span><span class="line"><span class="cl"> <span class="nb">help</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看当前网卡的连接状态</span>
+</span></span><span class="line"><span class="cl"> station wlan0 show
+</span></span><span class="line"><span class="cl"><span class="c1"># 扫描网络</span>
+</span></span><span class="line"><span class="cl"> station wlan0 scan
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看可连接的网络</span>
+</span></span><span class="line"><span class="cl"> station wlan0 get-networks
+</span></span><span class="line"><span class="cl"><span class="c1"># 连接网络，名字为“P40 pro”</span>
+</span></span><span class="line"><span class="cl"> station wlan0 connect <span class="s2">&#34;P40 pro&#34;</span>
+</span></span></code></pre></div><p>此时可以检查网络是否连通：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ping baidu.com
+</span></span></code></pre></div><p>如果无法ping通，极有可能是没有配置dhcp，使用：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dhcpcd <span class="p">&amp;</span>
+</span></span></code></pre></div><hr>
+<p><strong>更新系统时钟</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">timedatectl set-ntp <span class="nb">true</span> <span class="c1"># 将系统时间与网络时间进行同步</span>
+</span></span></code></pre></div><hr>
+
+
+<h3 class="relative group">磁盘分区 
+    <div id="%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>使用fdisk进行磁盘分区</p>
+<p>命令：</p>
+<ul>
+<li>
+<p>m：查看帮助</p>
+</li>
+<li>
+<p>p：打印当前分区表</p>
+</li>
+<li>
+<p>g：创建一个新的空的分区表，清理原来的分区
+在使用w命令之前，新创建的分区不会被写入，原来的分区也不会被覆盖</p>
+</li>
+<li>
+<p>n：创建一个新的分区</p>
+</li>
+</ul>
+<p>主要有三个分区：
+boot分区 + 主分区 + swap分区</p>
+<p>我这里创建四个分区
+第一个是系统引导分区，挂载在<code>/boot</code>目录下<br>
+第二个是主分区，挂载在根目录<code>/</code>下<br>
+第三个是用于存储用户文件数据分区，挂载在家目录<code>/home</code>下<br>
+第四个是swap分区</p>
+<hr>
+<p><strong>格式化，创建文件系统</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># /boot 分区应该为fat格式</span>
+</span></span><span class="line"><span class="cl">mkfs.fat -F32  /dev/nvme0n1p1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 根分区和家目录分区选择 ext4 文件系统</span>
+</span></span><span class="line"><span class="cl">mkfs.ext4 /dev/nvme0n1p2
+</span></span><span class="line"><span class="cl">mkfs.ext4 /dev/nvme0n1p3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># swap分区</span>
+</span></span><span class="line"><span class="cl">mkswap /dev/nvme0n1p4
+</span></span></code></pre></div><hr>
+<p><strong>挂载分区</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># swap挂载</span>
+</span></span><span class="line"><span class="cl">swapon /dev/nvme0n1p4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 主分区</span>
+</span></span><span class="line"><span class="cl">mount /dev/nvme0n1p2 /mnt 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># boot分区</span>
+</span></span><span class="line"><span class="cl">mkdir /mnt/boot
+</span></span><span class="line"><span class="cl">mount /dev/nvme0n1p1 /mnt/boot
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># home分区</span>
+</span></span><span class="line"><span class="cl">mkdir /mnt/home
+</span></span><span class="line"><span class="cl">mount /dev/nvme0n1p3 /mnt/home
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># or </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># omit mkdir</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># mount --mkdir /dev/nvme0n1p2 /mnt/home</span>
+</span></span></code></pre></div><p>挂载完成后，可以说系统的安装已经进行一大半了</p>
+<hr>
+
+
+<h3 class="relative group">正式安装 
+    <div id="%E6%AD%A3%E5%BC%8F%E5%AE%89%E8%A3%85" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%AD%A3%E5%BC%8F%E5%AE%89%E8%A3%85" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p><strong>选择国内的软件源</strong><br>
+在安装前要禁用reflector服务，该服务会自动更新pacman的mirrorlist，如果关闭晚了，也没关系，可以手动添加国内源</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># /etc/pacman.d/mirrorlist</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 将其中China下的镜像源提到最前面即可</span>
+</span></span></code></pre></div><hr>
+<p><strong>安装系统（Install essential packages）</strong><br>
+安装base 、linux 和 linux-firmware</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacstrap -K /mnt base linux linux-firmware
+</span></span></code></pre></div><hr>
+<p><strong>创建fstab文件</strong><br>
+fstab 用来定义磁盘分区。它是 Linux 系统中重要的文件之一。使用 genfstab 自动根据当前挂载情况生成并写入 fstab 文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</span></span></code></pre></div><hr>
+
+
+<h3 class="relative group">安装后，新系统中的配置 
+    <div id="%E5%AE%89%E8%A3%85%E5%90%8E%E6%96%B0%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E9%85%8D%E7%BD%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%AE%89%E8%A3%85%E5%90%8E%E6%96%B0%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E9%85%8D%E7%BD%AE" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>将当前安装环境切换到新系统环境下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">arch-chroot /mnt
+</span></span></code></pre></div><hr>
+<p><strong>设置时区，同步时间</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 在 /etc/localtime 下用 /usr 中合适的时区创建符号链接</span>
+</span></span><span class="line"><span class="cl">ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 同步时间</span>
+</span></span><span class="line"><span class="cl">hwclock --systohc
+</span></span></code></pre></div><hr>
+<p><strong>本地化设置</strong><br>
+编辑 <code>/etc/locale.gen</code> 并注释 <code>en_US.UTF-8 UTF-8，然后使用</code>local-gen`</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">locale-gen
+</span></span></code></pre></div><p>在<code>/etc/locale.conf</code>中设置LANG变量</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># /etc/locale.conf</span>
+</span></span><span class="line"><span class="cl"><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
+</span></span></code></pre></div><hr>
+<p><strong>主机名和host配置</strong><br>
+新建/etc/hostname 文件，向其中添加主机名<br>
+并在/etc/hosts 文件中，添加配置</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># /etc/hostname</span>
+</span></span><span class="line"><span class="cl">glede
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># /etc/hosts</span>
+</span></span><span class="line"><span class="cl">127.0.0.1 localhost
+</span></span><span class="line"><span class="cl">::1	  localhost
+</span></span><span class="line"><span class="cl">127.0.0.1 glede.localdomain glede
+</span></span></code></pre></div><hr>
+<p><strong>设置root密码</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">passwd
+</span></span><span class="line"><span class="cl"><span class="c1"># SheN_2327</span>
+</span></span></code></pre></div><hr>
+<p><strong>安装一些软件</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># intel微码</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># intel-ucode</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 引导程序</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># grub efibootmgr os-prober</span>
+</span></span><span class="line"><span class="cl">pacman -S grub efibootmgr intel-ucode os-prober
+</span></span></code></pre></div><hr>
+<p><strong>配置boot loader(grub)</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grub-install --target<span class="o">=</span>x86_64-efi --efi-directory<span class="o">=</span>/boot --bootloader-id<span class="o">=</span>ARCH
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># --efi-directory=/boot —— 将 grubx64.efi 安装到之前的指定位置（EFI 分区）</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># --bootloader-id=ARCH —— 取名为 Arch</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 接下来使用 vim 编辑 /etc/default/grub 文件</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># GRUB boot loader configuration</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">GRUB_DEFAULT</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nv">GRUB_TIMEOUT</span><span class="o">=</span><span class="m">5</span>
+</span></span><span class="line"><span class="cl"><span class="nv">GRUB_DISTRIBUTOR</span><span class="o">=</span><span class="s2">&#34;Arch&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">GRUB_CMDLINE_LINUX_DEFAULT</span><span class="o">=</span><span class="s2">&#34;loglevel=5 nowatchdog&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">GRUB_CMDLINE_LINUX</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">GRUB_DISABLE_OS_PROBER</span><span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 生产grub所需配置文件</span>
+</span></span><span class="line"><span class="cl">grub-mkconfig -o /boot/grub/grub.cfg
+</span></span></code></pre></div><hr>
+<p><strong>安装自需软件</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 这里可以安装一些必需的软件</span>
+</span></span><span class="line"><span class="cl">pacman -S iwd dhcpcd zsh vim
+</span></span><span class="line"><span class="cl"><span class="c1"># 网络配置： iwd dhcpcd</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># shell：zsh</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 编辑器：vim</span>
+</span></span></code></pre></div><hr>
+<p><strong>重启</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">exit</span>  <span class="c1"># 退回到安装引导系统中</span>
+</span></span><span class="line"><span class="cl">reboot  <span class="c1"># 重启，在重启的过程中，将U盘拔出</span>
+</span></span></code></pre></div>
+
+<h2 class="relative group">重启后的配置 
+    <div id="%E9%87%8D%E5%90%AF%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E9%87%8D%E5%90%AF%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>重启后，系统可以说已经安装完成，但要达到可用的程度，还差很远，需要做很多工作，下载许多软件</p>
+<p>最重要的莫过于安装桌面环境，可以选择个人喜欢的任何桌面环境 (Desktop Environment) 或者 窗口管理器 (Window Manager)</p>
+<ul>
+<li><a href="https://wiki.archlinux.org/title/GNOME"   target="_blank">
+    GNOME</a></li>
+<li><a href="https://wiki.archlinux.org/title/KDE"   target="_blank">
+    KDE</a></li>
+<li><a href="https://hyprland.org/"   target="_blank">
+    Hyprland</a></li>
+<li><a href="https://dwm.suckless.org/"   target="_blank">
+    Dwm</a></li>
+</ul>
+<p>我选择使用的是Hyprland，但由于我的电脑使用的是Nvidia显卡，安装hyprland环境的流程极其繁琐，本文不多作记录，可以参考hyprland官方wiki</p>
+<p>下面记录一些安装后，所需的基本配置</p>
+<hr>
+<p><strong>再次设置vconsole</strong><br>
+上文已经讲述过设置vconsole字体和keymap，但那是在安装环境下，便于我们安装而设置的，现在进入新系统中，需要重新进行设置。<br>
+vconsole的配置在<code>/etc/vconsole.conf</code> 文件中</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 在该文件中添加要修改的字体，以及键盘设置</span>
+</span></span><span class="line"><span class="cl"><span class="nv">KEYMAP</span><span class="o">=</span>us
+</span></span><span class="line"><span class="cl"><span class="nv">FONT</span><span class="o">=</span>LatGrkCyr-12x22
+</span></span></code></pre></div><hr>
+<p><strong>设置双系统引导</strong><br>
+如果是双系统，并且分别安装在两个盘中，那么现在开机时，你是无法进入win系统的，需要对boot loader(grub) 进行设置</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 先挂在windows的系统引导分区</span>
+</span></span><span class="line"><span class="cl">mount /dev/nvme1n1p1 /mnt
+</span></span><span class="line"><span class="cl">ls /mnt 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用os-prober 检测其他系统的引导</span>
+</span></span><span class="line"><span class="cl">os-prober
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 重新配置grub文件</span>
+</span></span><span class="line"><span class="cl">cp /boot/grub/grub.cfg /boot/grub/grub.cfg.bak
+</span></span><span class="line"><span class="cl">grub-mkconfig -o /boot/grub/grub.cfg
+</span></span></code></pre></div><hr>
+<p><strong>配置网络</strong><br>
+启用iwd</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl <span class="nb">enable</span> iwd.service
+</span></span><span class="line"><span class="cl">systemctl start iwd.service
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 这里网络的配置和上述一致，也有可能会遇到rfkill的问题，使用同样的方法即可</span>
+</span></span><span class="line"><span class="cl">ip link
+</span></span><span class="line"><span class="cl">ip link <span class="nb">set</span> wlan0 up
+</span></span><span class="line"><span class="cl">rfkill
+</span></span><span class="line"><span class="cl">rfkill unblock wlan
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 然后就可以使用iwctl连接网络了</span>
+</span></span></code></pre></div><hr>
+<p><strong>创建非root用户</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">useradd -m -G wheel -s /bin/bash username
+</span></span><span class="line"><span class="cl">passwd username <span class="c1"># 设置密码</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果没用下载vi，可以直接将vim链接到vi</span>
+</span></span><span class="line"><span class="cl">ln -s /usr/bin/vim /usr/bin/vi
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用visudo 编辑sudo file，提升wheel用户组权限</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#注释以下行</span>
+</span></span><span class="line"><span class="cl">%wheel <span class="nv">ALL</span><span class="o">=(</span>ALL:ALL<span class="o">)</span> ALL
+</span></span></code></pre></div><hr>
+<p><strong>安装man 和sudo</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S man-db sudo
+</span></span></code></pre></div><hr>
+<p><strong>添加multilib &amp;&amp; archlinuxcn 源</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 在pacman的配置文件中修改和添加</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># /etc/pacman.conf </span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 开启multilib</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>multilib<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Include</span> <span class="o">=</span> /etc/pacman.d/mirrorlist
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 开启 archlinuxcn</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>archlinuxcn<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Server</span> <span class="o">=</span> https://mirrors.nju.edu.cn/archlinuxcn/<span class="nv">$arch</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 这里可以参考官网，添加离你最近的镜像源</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">pacman -S archlinuxcn-keyring archlinuxcn-mirrorlist-git
+</span></span><span class="line"><span class="cl"><span class="c1"># 将上面archlinuxcn下的Server一行改为</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Include</span> <span class="o">=</span> /etc/pacman.d/archlinuxcn-mirrorlist
+</span></span></code></pre></div><hr>
+<p><strong>关闭令人抓狂的pc扬声器，蜂鸣声</strong><br>
+将 pcspkr 模块加入黑名单的方法可以阻止 udev 在启动时加载它</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># /etc/modprobe.d/nobeep.conf</span>
+</span></span><span class="line"><span class="cl">blacklist pcspkr
+</span></span></code></pre></div>
+
+<h2 class="relative group">Links 
+    <div id="links" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#links" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>1.<a href="https://wiki.archlinux.org/title/installation_guide"   target="_blank">
+    archlinux installation</a>
+2.<a href="https://www.bilibili.com/video/BV11J411a7Tp/?spm_id_from=333.999.0.0"   target="_blank">
+    thecw</a>
+3.<a href="https://arch.icekylin.online/"   target="_blank">
+    archlinux简明指南</a></p>
+
+        </div>
+        
+        
+
+        
+        
+
+          
+      </div>
+     
+      
+      
+        
+        
+          
+          
+        
+      <script>
+        var oid = "views_posts\/archlinux\/archinstall\/index.md"
+        var oid_likes = "likes_posts\/archlinux\/archinstall\/index.md"
+      </script>
+      
+      
+      
+      <script type="text/javascript" src="/js/page.min.b06a29d42a4ed16787978e2eee1e8c797b7698db2bc14ccee78f5c80ac566fc996190a73ad80a5e987558474b20b96fa38f7d85b405f165ff72b7b163c5ad11b.js" integrity="sha512-sGop1CpO0WeHl44u7h6MeXt2mNsrwUzO549cgKxWb8mWGQpzrYCl6YdVhHSyC5b6OPfYW0BfFl/3K3sWPFrRGw=="></script>
+  
+    </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/posts/essays/redback/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >红色背影</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2023-10-07 15:19:30 &#43;0800 CST">7 October 2023</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top" title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+    </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      &copy;
+      2024
+      yshenn
+    </p>
+    
+
+    
+    
+    <p class="text-xs text-neutral-500 dark:text-neutral-400">
+      
+      
+      Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+    </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+  
+  
+  <script type="text/javascript" src="/js/process.min.62060bb247f4de2b6dde45903668fefb68d792f365587605177b1227c0cf43588701edaca0cb40e2c8e2789bd5ce67c1d2a215b9fb258c3496a7cd25e7cb5fdf.js" integrity="sha512-YgYLskf03itt3kWQNmj&#43;&#43;2jXkvNlWHYFF3sSJ8DPQ1iHAe2soMtA4sjieJvVzmfB0qIVufsljDSWp80l58tf3w=="></script>
+  
+  
+</footer><div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="https://yshenn.cc/"
+  style="z-index:500"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>
